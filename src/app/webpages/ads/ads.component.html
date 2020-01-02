@@ -1,0 +1,21 @@
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4" *ngFor="let item of listarray">
+                <figure class="card card-product-grid card-lg"> <a href="#" class="img-wrap"><img
+                            src={{item.image}}></a>
+                    <figcaption class="info-wrap">
+                        <div class="row">
+                            <div class="col-md-8"> <a href="#" class="title" data-abc="true">{{item.name}}</a></div>
+                            <div class="col-md-4"> <a href="#" class="title" data-abc="true">{{item.date}}</a></div>
+                        </div>
+                    </figcaption>
+                    <div class="bottom-wrap"> <a routerLink="/inbox" class="btn btn-primary float-right">Messege</a>
+                        <a href="#" class="btn btn-primary mr-2 float-right">Report</a>
+                        <div class="price-wrap"> <span class="price h5">Rs.{{item.price}}</span> <br></div>
+                    </div>
+                </figure>
+            </div>
+        </div>
+    </div>
+</div>
