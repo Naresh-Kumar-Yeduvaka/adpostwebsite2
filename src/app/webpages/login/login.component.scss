@@ -1,86 +1,175 @@
 @import "./node_modules/bootstrap/scss/bootstrap";
-$bgcolor:#cdcdcd;
-$listitembgcolor: #a7b3a5;
-$navcolor:#B56357;
-$fontcolor:rgb(19, 1, 1);
-$fonts:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$bgcolor1:#cdcdcd;
+$bgcolor2: #a7b3a5;
+$iconbordercolor:#2c3531;
+$fontcolor:rgb(14, 5, 5);
+$fonts:"Helvetica Neue",Helvetica,Arial,sans-serif;
 
-.container-fluid{
+.login-page {
+    position: relative
+}
+
+.login-page::before {
+    content: '';
+    width: 100%;
+    height: 100%;
     display: block;
-    max-width: 100%;
-    height: 675px;
-    background-color:$listitembgcolor;
-    margin-block-start: -50px;
+    z-index: -1;
+    background-color: $bgcolor1;
+    background-size: cover;
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0
 }
-.kumar {
-    margin-left: 40%;
+#email{
+border-top: none;
+border-left: none;
+border-right: none;
+border-style: $bgcolor1;
 }
-.border {
-    border-radius: 15px;
+.login-page .container {
+    min-height: 100vh;
+    z-index: 999;
+    padding: 20px;
+    position: relative
 }
-.naresh{
-	border: 1px solid $listitembgcolor;
+
+.login-page .form-holder {
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 50px
+}
+
+.login-page .form-holder .info,
+.login-page .form-holder .form {
+    min-height: 70vh;
+    padding: 40px;
+    height: 100%
+}
+
+.login-page .form-holder div[class*='col-'] {
+    padding: 0
+}
+
+.login-page .form-holder .info {
+    background: $bgcolor2;
+    color: $fontcolor
+}
+
+.login-page .form-holder .info h1 {
+    font-size: 2.5em;
+    font-weight: 600
+}
+
+.login-page .form-holder .info p {
+    font-weight: 300
+}
+
+.login-page .form-holder .form .form-group {
+    position: relative;
+    margin-bottom: 30px
+}
+
+.login-page .form-holder .form .content {
+    width: 100%
+}
+
+.login-page .form-holder .form form {
+    width: 100%;
+    max-width: 400px
+}
+
+.login-page .form-holder .form #login,
+.login-page .form-holder .form #register {
+    margin-bottom: 20px;
+    cursor: pointer
+}
+
+.login-page .form-holder .form a.forgot-pass,
+.login-page .form-holder .form a.signup {
+    font-size: 0.9em;
+    color: $fontcolor;
+    text-decoration: none;
+}
+
+.login-page .form-holder .form small {
+    color: $fontcolor
+}
+
+.login-page .form-holder .form .terms-conditions label {
+    cursor: pointer;
+    color: $fontcolor;
+    font-size: 0.9em
+}
+
+.login-page .copyrights {
+    width: 100%;
+    z-index: 9999;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: $bgcolor1
+}
+
+@media (max-width: 991px) {
+    .login-page .info,
+    .login-page .form {
+        min-height: auto !important
+    }
+    .login-page .info {
+        padding-top: 100px !important;
+        padding-bottom: 100px !important
+    }
 }
 
 
+input.input-material {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid $bgcolor2;
+    padding: 10px 0
+}
 
+input.input-material.is-invalid {
+    border-color: #dc3545 !important
+}
 
+input.input-material:focus {
+    border-color: $bgcolor2
+}
 
+input.input-material ~ label {
+    color: #aaa;
+    position: absolute;
+    top: 14px;
+    left: 0;
+    cursor: text;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    font-weight: 300
+}
 
+input.input-material ~ label.active {
+    font-size: 15px;
+    top: -30px;
+    color: #796AEE
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+input.input-material.is-invalid ~ label {
+    color: #dc3545
+}
+.btn-primary{
+    background-color: $iconbordercolor;
+    border: 1px solid $iconbordercolor;
+}
+button, input {
+    outline: none !important;
+}
+.login-page .form-holder .form .form-group {
+    position: relative;
+    margin-bottom: 30px;
+}

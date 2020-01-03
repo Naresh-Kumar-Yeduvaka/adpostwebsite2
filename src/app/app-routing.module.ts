@@ -7,6 +7,7 @@ import { HomeComponent } from './webpages/home/home.component';
 import { InboxComponent } from './webpages/inbox/inbox.component';
 import { LoginComponent } from './webpages/login/login.component';
 import { ResetpasswordComponent } from './webpages/resetpassword/resetpassword.component';
+import { SellComponent } from './webpages/sell/sell.component';
 
 
 const routes: Routes = [
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path:'ads',component:AdsComponent},
   {path:'home',component:HomeComponent},
   {path:'inbox',component:InboxComponent},
-  {path:'login', component:LoginComponent}
+  {path:'login', component:LoginComponent},
+  {path:'sell', component:SellComponent}
 ];
 
 @NgModule({
